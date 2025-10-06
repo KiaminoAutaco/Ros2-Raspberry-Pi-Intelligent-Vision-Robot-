@@ -10,7 +10,7 @@ class MinimalSubscriber(Node):
         super().__init__('simple_rpi_subscriber')
         self.subscription = self.create_subscription(
             Int16,
-            'pub_topic',
+            '/pub_topic',
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning
